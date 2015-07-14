@@ -23,10 +23,10 @@
         )
     );
 
-    foreach ($books as $key => $book) {
-            echo("Title: {$key} " . PHP_EOL);
-        foreach ($book as $key => $element) {
-            echo("{$key}: {$element}" . PHP_EOL);
+    foreach ($books as $title => $book) {
+            echo("Title: {$title} " . PHP_EOL);
+        foreach ($book as $detail => $value) {
+            echo("{$detail}: {$value}" . PHP_EOL);
         }
     }
 
@@ -34,11 +34,11 @@
     echo(PHP_EOL);
 
 
-    foreach ($books as $key => $book) {
+    foreach ($books as $title => $book) {
         if ($book['Published'] > 1950) {    
-            echo("Title: {$key} " . PHP_EOL);
-            foreach ($book as $key => $element) {
-                echo("{$key}: {$element}" . PHP_EOL);
+            echo("Title: {$title} " . PHP_EOL);
+            foreach ($book as $detail => $value) {
+                echo("{$detail}: {$value}" . PHP_EOL);
             }
         }
     }
