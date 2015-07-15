@@ -8,15 +8,15 @@ function inspect ($var) {
 			return 'The value is Null.' . PHP_EOL;
 		case ("array"):
 			if (empty($var)) {
-				return 'The value is an empty array.' . PHP_EOL;
+				return 'This is an empty array.' . PHP_EOL;
 			} else {
-				return 'The value is an array.' . PHP_EOL;
+				return 'This is an array.' . PHP_EOL;
 			}
 		case ("boolean"):
 			if ($var) {
-				return "This is true." . PHP_EOL;
+				return "This $type is true." . PHP_EOL;
 			} else {
-				return "This is false." . PHP_EOL;
+				return "This $type is false." . PHP_EOL;
 			}
 		case ("string"):
 			if (empty($var)) {
