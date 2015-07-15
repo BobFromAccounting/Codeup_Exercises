@@ -25,7 +25,13 @@ function inspect ($var) {
 				return "The $type is $var" . PHP_EOL;
 			}
 		default:
-			return "The $type is $var" . PHP_EOL;
+			if (is_integer($var)) {
+				return "The $type is $var" . PHP_EOL;
+			} else if (is_float($var)) {
+				printf("The $type is '%f'\n", $var) . PHP_EOL;
+			} else {
+				return "The $type is $var" . PHP_EOL;
+			}
 	}
 }
 
@@ -46,24 +52,24 @@ $null = NULL;
 // TODO: After each echo statement, use inspect() to output the variable's type and its value
 
 echo 'Inspecting $num1:' . PHP_EOL;
-echo inspect ($num1);
+echo inspect ($num1) . PHP_EOL;
 echo 'Inspecting $num2:' . PHP_EOL;
-echo inspect ($num2);
+echo inspect ($num2) . PHP_EOL;
 echo 'Inspecting $num3:' . PHP_EOL;
-echo inspect ($num3);
+echo inspect ($num3) . PHP_EOL;
 echo 'Inspecting $num4:' . PHP_EOL;
-echo inspect ($num4);
+echo inspect ($num4) . PHP_EOL;
 echo 'Inspecting $null:' . PHP_EOL;
-echo inspect ($null);
+echo inspect ($null) . PHP_EOL;
 echo 'Inspecting $bool1' . PHP_EOL;
-echo inspect ($bool1);
+echo inspect ($bool1) . PHP_EOL;
 echo 'Inspecting $bool2' . PHP_EOL;
-echo inspect ($bool2);
+echo inspect ($bool2) . PHP_EOL;
 echo 'Inspecting $string1' . PHP_EOL;
-echo inspect ($string1);
+echo inspect ($string1) . PHP_EOL;
 echo 'Inspecting $string2' . PHP_EOL;
-echo inspect ($string2);
+echo inspect ($string2) . PHP_EOL;
 echo 'Inspecting $array1' . PHP_EOL;
-echo inspect ($array1);
+echo inspect ($array1) . PHP_EOL;
 echo 'Inspecting $array2' . PHP_EOL;
-echo inspect ($array2);
+echo inspect ($array2) . PHP_EOL;
