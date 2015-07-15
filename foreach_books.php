@@ -24,10 +24,11 @@
     );
 
     foreach ($books as $title => $book) {
-            echo("Title: {$title} " . PHP_EOL);
+        echo "Title: {$title} " . PHP_EOL;
         foreach ($book as $detail => $value) {
-            echo("{$detail}: {$value}" . PHP_EOL);
+            echo "{$detail}: {$value}" . PHP_EOL;
         }
+        echo "=========================" . PHP_EOL;
     }
 
     echo(PHP_EOL);
@@ -36,10 +37,11 @@
 
     foreach ($books as $title => $book) {
         if ($book['Published'] > 1950) {    
-            echo("Title: {$title} " . PHP_EOL);
+            echo "Title: {$title} " . PHP_EOL;
             foreach ($book as $detail => $value) {
-                echo("{$detail}: {$value}" . PHP_EOL);
+                echo "{$detail}: {$value}" . PHP_EOL;
             }
+        echo "=========================" . PHP_EOL;
         }
     }
 ?>
