@@ -52,3 +52,4 @@
         sort($people);
         print_r($people) . PHP_EOL;
     }
+?>
