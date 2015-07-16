@@ -45,8 +45,8 @@
         ]
     ];
 
+    arsort($companies);
     print_r($companies);
-//     arsort($companies);
 
 //     foreach ($companies as $companyName => $people) {
 //         echo "$companyName" . PHP_EOL;
