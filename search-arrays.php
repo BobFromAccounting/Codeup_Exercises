@@ -1,47 +1,34 @@
 <?php
 
+function isInArray ($name, $names) {
+	$results = array_search($name, $names);
+
+	if ($results !== false) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+function compareArrays ($names, $compare) {
+	$commonNames = 0;
+	foreach ($names as $name) {
+		$results = array_search($name, $compare);
+		if ($results !== false) {
+			$commonNames += 1;
+		}
+	}
+	return $commonNames . PHP_EOL;
+}
+
 $names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam'];
 
 $compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael'];
 
-function isSearching ($needle, $names) {
-	$results = array_search($needle, $names);
 
-	if ($results !== false) {
-		return "$needle is in the array at index: $results";
-	} else {
-		return "The following name does not exist: $needle";
-	}
-}
+echo isInArray('Tina', $names);
+echo isInArray('Bob', $names);
 
-function compareArrays ($needle, $names, $compare) {
-	$resultsNames = array_search($needle, $names);
-	$resultsCompare = array_search($needle, $compare);
+echo compareArrays($names, $compare);
 
-	if ($resultsNames !== false && $resultsCompare !== false) {
-		if ($resultsNames === $resultsCompare) {
-			return "$needle appears in both arrays at index: $resultsNames";
-		} else {
-			return "$needle does not appear in both arrays.";
-		}
-	} else {
-		return "The following name does not match in both arrays: $needle";
-	}
-}
-
-
-
-echo isSearching('Tina', $names) . PHP_EOL;
-echo isSearching('Bob', $names) . PHP_EOL;
-
-echo PHP_EOL;
-echo PHP_EOL;
-
-echo compareArrays("Tina", $names, $compare) . PHP_EOL;
-echo compareArrays("Amy", $names, $compare) . PHP_EOL;
-echo compareArrays("Dana", $names, $compare) . PHP_EOL;
-echo compareArrays("Dean", $names, $compare) . PHP_EOL;
-echo compareArrays("Mike", $names, $compare) . PHP_EOL;
-echo compareArrays("Mel", $names, $compare) . PHP_EOL;
-echo compareArrays("Michael", $names, $compare) . PHP_EOL;
-echo compareArrays("Adam", $names, $compare) . PHP_EOL;
+?>
