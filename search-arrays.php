@@ -26,8 +26,8 @@ $names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam'];
 $compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael'];
 
 
-echo isInArray('Tina', $names);
-echo isInArray('Bob', $names);
+echo isInArray('Tina', $names) . PHP_EOL;
+echo isInArray('Bob', $names) . PHP_EOL;
 
 echo compareArrays($names, $compare);
 
