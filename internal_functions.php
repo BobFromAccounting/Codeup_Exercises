@@ -25,10 +25,10 @@ function inspect ($var) {
 				return "The $type is $var" . PHP_EOL;
 			}
 		default:
-			if (is_integer($var)) {
+			if (is_int($var)) {
 				return "The $type is $var" . PHP_EOL;
 			} else if (is_float($var)) {
-				printf("The $type is '%f'\n", $var) . PHP_EOL;
+				return sprintf("The $type is '%f'", $var) . PHP_EOL;
 			} else {
 				return "The $type is $var" . PHP_EOL;
 			}
