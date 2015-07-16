@@ -25,6 +25,7 @@ function isInArray ($name, $names) {
 
 function compareArrays ($names, $compare) {
 	$commonNames = 0;
+
 	foreach ($names as $name) {
 		$results = array_search($name, $compare);
 		if ($results !== false) {
@@ -34,8 +35,7 @@ function compareArrays ($names, $compare) {
 	return $commonNames . PHP_EOL;
 }
 
-$names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam'];
-
+$names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam'];	
 $compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael'];
 
 
