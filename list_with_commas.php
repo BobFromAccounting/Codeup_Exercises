@@ -5,7 +5,7 @@
 			sort($array);
 		}
 		$lastInArray = array_pop($array);
-		$modifiedLastInArray = array_push($array, "and {$lastInArray}");
+		array_push($array, "and {$lastInArray}");
 		return implode(", ", $array);
 	}
 
