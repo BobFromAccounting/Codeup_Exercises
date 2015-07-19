@@ -10,17 +10,32 @@
 			if ($details['sunroof'] == false) {
 				echo "Sunroof: N/A" . PHP_EOL;				
 			} else {
-				echo "Sunroof: {$details['sunroof']}" . PHP_EOL;
+				echo "Sunroof: Yes" . PHP_EOL;
 			}
 			if ($details['convertable'] == false) {
 				echo "Convertable: N/A" . PHP_EOL;
 			} else {
-				echo "Convertable: {$details['convertable']}" . PHP_EOL;
+				echo "Convertable: Yes" . PHP_EOL;
 			}
 			echo "License NO: {$details['license']}" . PHP_EOL;
 
 			echo PHP_EOL;
 		}
+	}
+
+	function add_car ($cars) {
+		$newCar = array(
+			'Telsa Model S' => array(
+				'year' => 2015,
+				'doors' => 4,
+				'color' => 'black',
+				'mileage' => 1000,
+				'sunroof' => true,
+				'convertable' => false,
+				'license' => 'LISPFTW',
+				)
+			);
+		return $cars + $newCar;
 	}
 
 	$cars = array(
@@ -30,7 +45,7 @@
 	    	'color' => 'gray',
 	    	'mileage' => 100000,
 	    	'sunroof' => true,
-	    	'convertable' => false,
+	    	'convertable' => true,
 	    	'license' => 'JSRULZ',
 		),
 
@@ -55,10 +70,8 @@
 		),
 
 	);
+	
+	add_car($cars);
 
-
-	list_cars($cars);
-
-
-
+	list_cars(add_car($cars));
 ?>
