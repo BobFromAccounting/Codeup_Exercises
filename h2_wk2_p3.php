@@ -71,7 +71,14 @@
 
 	);
 	
-	add_car($cars);
+	list_cars($cars);
 
-	list_cars(add_car($cars));
+	echo PHP_EOL;
+	echo PHP_EOL;
+	echo PHP_EOL;
+	echo PHP_EOL;
+
+	$newArray = add_car($cars);
+
+	list_cars($newArray);
 ?>
