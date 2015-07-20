@@ -22,7 +22,7 @@ function logError ($message)
 }
 
 $messageExample = "WARNING! It's a TRAaaP!";
-$messageExampleTwo = "Red squadron, Luke didn't make it past the trenches...Probably Should have used the targetter.";
+$messageExampleTwo = "Red squadron, Luke didn't make it past the trenches...He probably Should have used the targetter.";
 
 logInfo($messageExample);
 logError($messageExampleTwo);
