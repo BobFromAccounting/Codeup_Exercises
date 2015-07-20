@@ -13,18 +13,24 @@ function logMessage ($logLevel, $message)
 
 function logInfo ($message)
 {
-	return logMessage("INFO", $message);
+	return logMessage('INFO', $message);
 }
 
 function logError ($message)
 {
-	return logMessage("ERROR", $message);
+	return logMessage('ERROR', $message);
+}
+
+function logWarning ($message)
+{
+	return logMessage('WARNING', $message);
 }
 
 $messageExample = "WARNING! It's a TRAaaP!";
 $messageExampleTwo = "Red squadron, Luke didn't make it past the trenches...He probably Should have used the targetter.";
 
-logInfo($messageExample);
+logInfo('It looks like that Luke kid is at it again');
 logError($messageExampleTwo);
+logWarning($messageExample)
 
 ?>
