@@ -11,19 +11,14 @@ function logMessage ($logLevel, $message)
 	fclose($handle);
 }
 
-
 function logInfo ($message)
 {
-	$logLevel = "INFO";
-
-	logMessage($logLevel, $message);
+	return logMessage("INFO", $message);
 }
 
 function logError ($message)
 {
-	$logLevel = "Error";
-
-	logMessage($logLevel, $message);
+	return logMessage("ERROR", $message);
 }
 
 $messageExample = "WARNING! It's a TRAaaP!";
