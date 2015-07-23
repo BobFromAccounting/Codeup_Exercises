@@ -1,15 +1,13 @@
 <?php
-
 class Log
 {
     public $filename;
-    public function $logMessage($logLevel, $message)
+
+    public function logMessage ($logLevel, $message)
     {
-        $today = date("Y-m-d");
         $logSpecificTime =  date("Y-m-d H:i:s");
-        $filename = "log/log-{$today}.log";
         $stringToWrite =  "{$logSpecificTime} [{$logLevel}] {$message}";
-        $handle = fopen($filename, 'a');
+        $handle = fopen($this->filename, 'a');
         fwrite($handle, PHP_EOL . $stringToWrite);
         fclose($handle);
     }
@@ -24,9 +22,4 @@ class Log
         return $this->logMessage('ERROR', $message);
     }
 }
-
-
-
-
-
 ?>
