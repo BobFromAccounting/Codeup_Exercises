@@ -1,11 +1,7 @@
 <?php
     require_once 'Log.php';
 
-    $today = date("Y-m-d");
-
-    $log = new Log();
-
-    $log->filename = "log/log-{$today}.log";
+    $log = new Log('cli');
     
     $log->logInfo("Gobbledegook");
     $log->logError("Worse gobbledegook");
