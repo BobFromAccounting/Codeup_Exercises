@@ -6,4 +6,5 @@
     $log->logInfo("Gobbledegook");
     $log->logError("Worse gobbledegook");
     $log->logMessage('WARNING', "You might have gobbledegook!");
+    unset($log);
 ?>
