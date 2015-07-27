@@ -27,6 +27,11 @@ class Log
         return $this->logMessage('ERROR', $message);
     }
 
+    public function logWarning ($message)
+    {
+        return $this->logMessage('WARNING', $message);
+    }
+
     public function __destruct ()
     {
         fclose($this->handle);
