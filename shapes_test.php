@@ -5,10 +5,12 @@
     $polygon = new Rectangle(4, 5);
 
     echo $polygon->area();
-
-    $square = new Square(5, 5);
-
-    echo $square->area();
     
-    echo $square->perimeter();
+    echo $polygon->perimeter();
+
+    $huey = new Square(5);
+
+    echo $huey->area();
+    
+    echo $huey->perimeter();
 ?>
