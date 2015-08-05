@@ -10,13 +10,13 @@
 
         public function area()
         {
-            $area = $this->height * $this->height;
+            $area = $this->getHeight() * $this->getHeight();
             return $area . PHP_EOL;
         }
 
         public function perimeter()
         {
-            $perimeter = $this->height * 4;
+            $perimeter = $this->getHeight() * 4;
             return $perimeter . PHP_EOL;
         }
     }
