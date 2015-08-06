@@ -1,6 +1,7 @@
 <?php
 
-	function humanizedList($array, $sort = false) {
+	function humanizedList($array, $sort = false)
+	{
 		if ($sort) {
 			sort($array);
 		}

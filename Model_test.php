@@ -9,4 +9,7 @@
     echo $model->firstName;
     echo $model->awesomeSauce;
     echo $model->weakSauce;
+    
+    echo User::getTableName() . PHP_EOL;
+
 ?>
