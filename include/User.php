@@ -22,7 +22,11 @@
 
         public function update()
         {
-
+            $query = 'UPDATE users SET first_name = :first, last_name = :last WHERE id = :id'
+            $stmt - self::$dbc->prepare($query);
+            $stmt->bindValue(':first', )
+            $stmt->bindValue(':id', $this->attributes['id'], PDO::PARAM_INT);
+            $stmt->execute();
         }
 
         public function insert()
