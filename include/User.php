@@ -22,25 +22,31 @@
 
         public function update()
         {
-            $query = 'UPDATE users SET first_name = :first, last_name = :last WHERE id = :id'
-            $stmt - self::$dbc->prepare($query);
-            $stmt->bindValue(':first', )
+            $query = 'UPDATE users 
+                        SET first_name = :first_name,
+                        last_name = :last_name
+                        WHERE id = :id';
+            $stmt = self::$dbc->prepare($query);
+            $stmt->bindValue(':first_name', $this->attribute['first_name'], PDO::PARAM_STR);
+            $stmt->bindValue(':last_name', $this->attribute['last_name'], PDO::PARAM_STR);
             $stmt->bindValue(':id', $this->attributes['id'], PDO::PARAM_INT);
             $stmt->execute();
         }
 
         public function insert()
         {
-            $query = 'INSERT INTO users (first_name, last_name) VALUES (:first, :last)';
+            $query = 'INSERT INTO users (first_name, last_name)
+                        VALUES (:first_name, :last_name)';
             $stmt = self::$dbc->prepare($query);
-            $stmt->bindValue(':first', $this->attributes['first_name'], PDO::PARAM_STR);
-            $stmt->bindValue(':last', $this->attributes['last_name'], PDO::PARAM_STR);
+            $stmt->bindValue(':first_name', $this->attributes['first_name'], PDO::PARAM_STR);
+            $stmt->bindValue(':last_name', $this->attributes['last_name'], PDO::PARAM_STR);
             $stmt->execute();
         }
 
         public function delete()
         {
-            $query = 'DELETE FROM users WHERE id = :id';
+            $query = 'DELETE FROM users
+            WHERE id = :id';
             $stmt = self::$dbc->prepare($query);
             $stmt->bindValue(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
